@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Explorer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1 class="logo">Travel Explorer</h1>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('destinations')">Destinations</a>
+        <a onclick="showSection('booking')">Booking</a>
+    </nav>
+</header>
+
+<!-- ✅ MAIN WRAPPER -->
+<main>
+
+<!-- HOME -->
+<section id="home" class="section active">
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Next Adventure 🌍</h2>
+            <p>Explore the world with comfort and style</p>
+            <button onclick="showSection('booking')">Book Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations" class="section">
+    <h2>Popular Destinations</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://substackcdn.com/image/fetch/$s_!lFs8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F804d890c-9874-45b4-8c44-dfb8d2890675_1000x667.jpeg">
+            <h3>Paris</h3>
+            <p>City of Love</p>
+        </div>
+
+        <div class="card">
+            <img src="https://media.digitalnomads.world/wp-content/uploads/2021/01/20120709/bali-for-digital-nomads.jpg">
+            <h3>Bali</h3>
+            <p>Tropical Paradise</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.natgeofe.com/k/5b396b5e-59e7-43a6-9448-708125549aa1/new-york-statue-of-liberty_2x1.jpg">
+            <h3>New York</h3>
+            <p>The Big Apple</p>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="section">
+    <h2>Book Your Trip</h2>
+
+    <form class="booking-form" onsubmit="bookTrip(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+
+        <select required>
+            <option value="">Select Destination</option>
+            <option>Paris</option>
+            <option>Bali</option>
+            <option>New York</option>
+        </select>
+
+        <input type="date" required>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Travel Explorer. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
